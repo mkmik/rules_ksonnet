@@ -1,0 +1,8 @@
+sh_binary(
+    name = "kubecfg",
+    srcs = ["kubecfg.sh"],
+    data = [
+        "@ksonnet_lib//:files",
+        "@kubecfg//:kubecfg",
+    ],
+)
