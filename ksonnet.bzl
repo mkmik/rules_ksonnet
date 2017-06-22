@@ -25,6 +25,6 @@ def ksonnet_to_yaml(name, src, out, deps=[]):
             "@ksonnet_lib//:files",
         ] + deps,
         outs = [out],
-        cmd = "$(location @kubecfg//:kubecfg) -J external show -o yaml %s >$@" % src,
-        tools = ["@kubecfg//:kubecfg"],
+        cmd = "$(location @rules_ksonnet//:kubecfg) show -o yaml %s >$@" % src,
+        tools = ["@rules_ksonnet//:kubecfg"],
     )

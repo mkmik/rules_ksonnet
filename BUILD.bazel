@@ -5,4 +5,5 @@ sh_binary(
         "@ksonnet_lib//:files",
         "@kubecfg//:kubecfg",
     ],
+    visibility = ["//visibility:public"],
 )
